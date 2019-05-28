@@ -68,6 +68,7 @@ void push_x(int x, linkedList L)
 }
 
 //生成链表
+// O(N)
 linkedList produceList(const int A[], int N)
 {
 	//1- 生成空表
