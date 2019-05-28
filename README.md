@@ -165,7 +165,7 @@ book章节总结：
 
 7. [Chapter_8](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/tree/master/chapter_8)
 * 并查集（不相交集）**（N为NUMSETS，预设集合size）**
-	* int* createEmptySet()：构建空集，O(N)
+	* int* createEmptySet()：**构建空集，O(N)**
 	* void union1_set(int* s, int root1, int root2)：**union-any，O(1)**
 	* void union2_set(int* s, int root1, int root2)：**union-by-size，O(1)**
 	* void union3_set(int* s, int root1, int root2)：**union-by-height，O(1)**
