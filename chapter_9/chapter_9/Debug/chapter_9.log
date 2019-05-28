@@ -1,0 +1,8 @@
+﻿  chapter9_test.cpp
+f:\studying\myprojects\visualstudio\dsa_c\chapter_9\chapter_9\graph_algorithms.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  graph_algorithms.cpp
+f:\studying\myprojects\visualstudio\dsa_c\chapter_9\chapter_9\graph_algorithms.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\studying\myprojects\visualstudio\dsa_c\chapter_9\chapter_9\graph_algorithms.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  正在生成代码...
+f:\studying\myprojects\visualstudio\dsa_c\chapter_9\chapter_9\graph_algorithms.cpp(334): warning C4715: “findNewVertexOfIndegreeZero”: 不是所有的控件路径都返回值
+  chapter_9.vcxproj -> F:\STUDYING\MyProjects\VisualStudio\DSA_C\chapter_9\Debug\chapter_9.exe

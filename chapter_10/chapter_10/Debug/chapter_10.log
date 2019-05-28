@@ -1,0 +1,12 @@
+﻿  algorithms_DesignTips.cpp
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\algorithms_designtips.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\algorithms_designtips.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\algorithms_designtips.cpp(422): warning C4018: “<”: 有符号/无符号不匹配
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\algorithms_designtips.cpp(424): warning C4018: “<”: 有符号/无符号不匹配
+  chapter10_test.cpp
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\chapter10_test.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\algorithms_designtips.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\chapter10_test.cpp(35): warning C4018: “<”: 有符号/无符号不匹配
+f:\studying\myprojects\visualstudio\dsa_c\chapter_10\chapter_10\chapter10_test.cpp(37): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码...
+  chapter_10.vcxproj -> F:\STUDYING\MyProjects\VisualStudio\DSA_C\chapter_10\Debug\chapter_10.exe
