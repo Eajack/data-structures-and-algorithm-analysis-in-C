@@ -72,8 +72,3 @@ void printMatrix(Matrix X, int row, int col);
 //10.4.1 Random Number
 void initRandom(unsigned long initVal);
 double getRandom();
-//10.4.2 Skip Lists
-struct skipNode;
-typedef struct skipNode *ptrToSkipNode;
-typedef struct skipNode **Next;
-typedef ptrToSkipNode SkipList;

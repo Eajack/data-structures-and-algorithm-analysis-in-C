@@ -32,7 +32,7 @@ int findMin_left(PQ_left q)
 }
 
 //merge q1&q2
-// O()
+// O(logN)
 //merge_left steps:
 // step 1- if q1=NULL or q2=NULL, return q2 or q1.
 // step 2- if q1≠NULL and q2≠NULL
@@ -83,7 +83,7 @@ static PQ_left subMerge_left(PQ_left q1, PQ_left q2)
 }
 
 //insert x
-// O()
+// O(logN)
 PQ_left insert_left(int x, PQ_left q)
 {
 	PQ_left singleNode = (PQ_left)malloc(sizeof(struct treeNode_left));
@@ -104,7 +104,7 @@ PQ_left insert_left(int x, PQ_left q)
 }
 
 //deleteMin, delete root <=> merge left&right
-// O()
+// O(logN)
 PQ_left deleteMin_left(PQ_left q)
 {
 	PQ_left leftHeap, rightHeap;
@@ -123,7 +123,7 @@ PQ_left deleteMin_left(PQ_left q)
 }
 
 //build heap
-// O()
+// O(NlogN)
 PQ_left buildHeap_left(const int A[], int N)
 {
 	//1- create root

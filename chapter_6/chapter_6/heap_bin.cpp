@@ -130,7 +130,7 @@ int deleteMin_bin(PQ_bin q)
 }
 
 //build heap
-// O(N)
+// O(NlogN)s
 PQ_bin buildHeap_bin(const int A[], int N)
 {
 	PQ_bin q = createEmptyPQ_bin(N);
@@ -144,7 +144,7 @@ PQ_bin buildHeap_bin(const int A[], int N)
 
 //6.4 heap application
 //6.4.1 select the k-th largest num in A[N], heap sort
-// O(N) + O((N-k) * logN) = O(N + (N-k)*logN)
+// O(NlogN) + O((N-k) * logN) = O(NlogN + (N-k)*logN)
 int select_k(const int A[], int N, int k)
 {
 	//1- build heap

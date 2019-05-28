@@ -75,7 +75,7 @@ static PQ_skew subMerge_skew(PQ_skew q1, PQ_skew q2)
 }
 
 //insert x
-// O()
+// O(logN)
 PQ_skew insert_skew(int x, PQ_skew q)
 {
 	PQ_skew singleNode = (PQ_skew)malloc(sizeof(struct treeNode_skew));
@@ -95,7 +95,7 @@ PQ_skew insert_skew(int x, PQ_skew q)
 }
 
 //deleteMin, delete root <=> merge left&right
-// O()
+// O(logN)
 PQ_skew deleteMin_skew(PQ_skew q)
 {
 	PQ_skew leftHeap, rightHeap;
@@ -114,7 +114,7 @@ PQ_skew deleteMin_skew(PQ_skew q)
 }
 
 //build heap
-// O()
+// O(NlogN)
 PQ_skew buildHeap_skew(const int A[], int N)
 {
 	//1- create root
