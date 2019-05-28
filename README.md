@@ -1,9 +1,7 @@
 #  data structures and algorithm analysis in C
 # 《数据结构与算法分析——C语言描述》
 
-<div align=center>
-![《数据结构与算法分析——C语言描述》](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/blob/master/book.jpg)
-</div>
+<div align=center><img src="https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/blob/master/book.jpg"/></div>
 
 
 ## 1、运行环境
@@ -37,10 +35,10 @@ book章节总结：
 
 以下总结已完成代码：
 1. [Chapter_2](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/tree/master/chapter_2)
->* 最大子序列和问题（3种算法）
->* 二分法（binary search）
->* 欧几里得算法gcd（求最大公因子）
->* 取幂算法
+* 最大子序列和问题（3种算法）
+* 二分法（binary search）
+* 欧几里得算法gcd（求最大公因子）
+* 取幂算法
 
 2. [Chapter_3](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/tree/master/chapter_3)
 * 链表 linkedList
@@ -62,7 +60,7 @@ book章节总结：
 		* int get_digit(int num, int digit)：**radixSort辅助函数，获取num的位digit处值，O(digit)**
 		* void radixSort(int* A, int N, bool reverseFlag=false, int M=10)：**基数排序，O(PNM)实现，然而书中是O(P(N-M))...**
 * 栈 stack
-	* (1) 栈**（N为栈元素数量）**
+	* (1) 栈 **（N为栈元素数量）**
 		* int isEmptyStack(Stack S)：**判断是否为空栈，O(1)**
 		* Stack produceEmptyStack()：**生成空栈，O(1)**
 		* Stack produceStack(const int A[], int N)：**生成栈，O(N)**
@@ -75,7 +73,7 @@ book章节总结：
 		* int checkSymbols(string inputText)：**平衡符号检测，编译器检查符号是否成对，O(|inputText|)**
 		* int calculatePostfix(const char postfixExpression_array[], int N)：**计算后缀表达式，O(N)**
 		* char* transfer_Infix2Postfix(const char postfixExpression_array[], int N)：**中缀表达式 => 后缀表达式，O(N)**
-* 队列 queue**（N为队列元素数量）**（基于链表）
+* 队列 queue **（N为队列元素数量）**（基于链表）
 	* int isEmpty_queue(queue_header Q)：**判断是否为空队列，O(1)**
 	* int isFull_queue(queue_header Q)：**判断是否为满队列，O(1)**
 	* queue_header createEmptyQueue()：**生成空队列，O(1)**
@@ -113,7 +111,7 @@ book章节总结：
 		* ptrToNode_seq find_seq(int key, ptrToHashTable_seq H)：**查找H[key]， O(N)**
 		* void insert_seq(int key, ptrToHashTable_seq H)：**插入key， O(N)**
 		* ptrToHashTable_seq createHashTable_seq(const int key[], int N, int tableSize)：**构建哈希表， O(N * tableSize)**
-	* 方法2：开放定址法 open addressing**（N为链表个数，tableSize）**
+	* 方法2：开放定址法 open addressing **（N为链表个数，tableSize）**
 		* int nextPrime_oa(int N)：**同nextPrime_seq**
 		* int hashFuntion_oa(int key, int modValue)：**hashFuntion_seq**
 		* ptrToHashTable_oa createEmptyHashTable_oa(int tableSize)：**同createEmptyHashTable_seq**
@@ -146,7 +144,7 @@ book章节总结：
 		* PQ_left insert_left(int x, PQ_left q)：**插入x，O(logN)**
 		* PQ_left deleteMin_left(PQ_left q)：**删除最小值root，O(logN)**
 		* PQ_left buildHeap_left(const int A[], int N)：**构建左式堆，O(NlogN)**
-	* 斜堆 heap_left（属于左式堆，差别：交换Npl无条件）
+	* 斜堆 heap_left （属于左式堆，差别：交换Npl无条件）
 		* bool isEmpty_skew(PQ_skew q)：**判断q是否为空，O(1)**
 		* int findMin_skew(PQ_skew q)：**查找最小值，O(1)**
 		* PQ_skew merge_skew(PQ_skew q1, PQ_skew q2)：**合并q1 & q2，O(logN)**
@@ -156,7 +154,7 @@ book章节总结：
 		* PQ_skew buildHeap_skew(const int A[], int N)：**构建斜堆，O(NlogN)**
 
 6. [Chapter_7](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/tree/master/chapter_7)
-* 排序算法**（N为元素个数）**（平均大O）
+* 排序算法 **（N为元素个数）**（平均大O）
 	* void insert_sort(int A[], int N)：**插入排序，O(N^2)**
 	* void shell_sort(int A[], int N)：**希尔排序，O(N^1.5-2)**
 	* void heap_sort(int A[], int N)：**堆排序，O(NlogN)**
@@ -174,7 +172,7 @@ book章节总结：
 	* int find_set(int* s, int value)：**查找value所在集合index，O(value)**
 
 8. [Chapter_9](https://github.com/Eajack/data-structures-and-algorithm-analysis-in-C/tree/master/chapter_9)
-* 图论**（|V|为点数，|E|为边数）**
+* 图论 **（|V|为点数，|E|为边数）**
 	* ptrToAdjList_DAG createGraph_adjList(int option, int v_num)：**建图，邻接表，O(|V|+|E|)**
 	* ptrToAdjMatrix_DAG createGraph_adjMatrix(int option, int v_num)：**建图，邻接矩阵，O(|V|^2)**
 	* int* getIndegree_adjList(ptrToAdjList_DAG adj_list, int v_num)：**获取入度数组，邻接表，O(|E|)**
