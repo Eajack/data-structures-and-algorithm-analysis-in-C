@@ -26,6 +26,7 @@ struct hashTable_seq
 };
 
 //find next prime of N
+// O(N^1.5)
 int nextPrime_seq(int N)
 {
 	for(int i=N+1; i<2*N; i++)
