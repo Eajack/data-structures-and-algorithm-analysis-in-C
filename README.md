@@ -7,14 +7,14 @@
 ## 1、运行环境
 > * Windows
 > * VS 2017
-> * C--
+> * cpp
 
 ## 2、参考资料
 > * 《数据结构与算法分析——C语言描述》
 > * Google
 
 ## 3、代码说明
-C--代码实现（C--入门弱鸡，混C/C--风格），每一章节的文件夹对应1个VS2017 C--工程。实现进度如下：
+cpp代码实现（cpp入门弱鸡，混C/cpp风格），每一章节的文件夹对应1个VS2017 cpp工程。实现进度如下：
 >* 实现：Chapter 2 ~ 9
 >* 基本实现：Chapter 10
 >* 未实现：Chapter 11-12、Chapter 4.4-4.5
@@ -193,19 +193,19 @@ book章节总结：
 * 算法设计技巧
 	* (1) Greedy Algorithm 贪婪算法
 		* (1.1) 霍夫曼码
-			* tree_Huffman buildHuffmanTree(SymbolTable T)：构建霍夫曼树，O(N)
-			* HuffmanCodeTable buildHuffmanCodeTable(tree_Huffman treeH)：构建霍夫曼编码表，O(logN)
+			* tree_Huffman buildHuffmanTree(SymbolTable T)：**构建霍夫曼树，O(N)**
+			* HuffmanCodeTable buildHuffmanCodeTable(tree_Huffman treeH)：**构建霍夫曼编码表，O(logN)**
 		* (1.2) 近似装箱问题
-			* Bins solveBMPOnline_nextFit(const double A[], int N)：下项适合算法，O(N)
-			* Bins solveBMPOnline_firstFit(const double A[], int N)：首次适合算法，O(N^2)
-			* Bins solveBMPOnline_bestFit(const double A[], int N)：最佳适合算法，O(N^2)
+			* Bins solveBMPOnline_nextFit(const double A[], int N)：**下项适合算法，O(N)**
+			* Bins solveBMPOnline_firstFit(const double A[], int N)：**首次适合算法，O(N^2)**
+			* Bins solveBMPOnline_bestFit(const double A[], int N)：**最佳适合算法，O(N^2)**
 	* (2) Divide & Conquer 分治算法
 		* (2.1) 最近点问题
-			* double getMinimumPoints(Points points_vector, Point &a, Point &b)：原算法O(NlogN)，本代码getMinimumPoints_sub未进一步优化；
+			* double getMinimumPoints(Points points_vector, Point &a, Point &b)：**原算法O(NlogN)，本代码getMinimumPoints_sub未进一步优化**
 		* (2.2) 矩阵乘法
-			* Matrix matrix_mul_origin(Matrix A, Matrix B, int rowA, int colA, int rowB, int colB)：矩阵乘法定义，O(N^3)
+			* Matrix matrix_mul_origin(Matrix A, Matrix B, int rowA, int colA, int rowB, int colB)：**矩阵乘法定义，O(N^3)**
 	* (3) 随机化算法 Random Algorithms
-		* double getRandom()：获取随机数，O(1)
+		* double getRandom()：**获取随机数，O(1)**
 
 ## 4、ToDo list(may be...)
 基本的数据结构和算法实现都过了一遍，然而这东西不多看的话，肯定会忘。所以，刷leetcode也是必须的。考虑以后可能会，每一章按主题来写些总结回顾下，这样也能加深记忆，不过也要看时间吧。。。毕竟总结也十分耗时间，只不过重温的收获应该会多点罢了。
