@@ -1,6 +1,0 @@
-﻿  hash_oa.cpp
-f:\studying\myprojects\visualstudio\dsa_c\chapter_5\chapter_5\hash_oa.cpp(94): warning C4018: “>=”: 有符号/无符号不匹配
-f:\studying\myprojects\visualstudio\dsa_c\chapter_5\chapter_5\hash_oa.cpp(104): warning C4018: “>=”: 有符号/无符号不匹配
-f:\studying\myprojects\visualstudio\dsa_c\chapter_5\chapter_5\hash_oa.cpp(43): warning C4715: “nextPrime_oa”: 不是所有的控件路径都返回值
-f:\studying\myprojects\visualstudio\dsa_c\chapter_5\chapter_5\hash_oa.cpp(74): warning C4715: “createEmptyHashTable_oa”: 不是所有的控件路径都返回值
-  chapter_5.vcxproj -> F:\STUDYING\MyProjects\VisualStudio\DSA_C\chapter_5\Debug\chapter_5.exe
