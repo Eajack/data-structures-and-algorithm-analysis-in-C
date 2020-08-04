@@ -21,8 +21,8 @@ Heap::Heap()
 Heap::Heap(std::vector<int> vals, HEAP_TYPE flag)
 {
 	//1
-	int capacity = 2 * vals.size(), size = vals.size();
-	heap = new HeapBinary(capacity, size, flag);
+	int _capacity = 2 * vals.size();
+	heap = new HeapBinary(_capacity, 0, flag);
 	//2
 	for (int v : vals) {
 		enqueue(v);
@@ -41,17 +41,17 @@ void Heap::enqueue(int val)
 	}
 
 	//key code
-	int i;
+	int i = (++heap->size);
 	if (heap->heapArray[0] == INT_MIN) {
 		//最小堆，上小下大 => h->heapArray[i/2] > val
-		for (int i = (++heap->size); heap->heapArray[i / 2] > val; i /= 2)	// ++size;
+		for (; heap->heapArray[i / 2] > val; i /= 2)	// ++size;
 		{
 			heap->heapArray[i] = heap->heapArray[i / 2];
 		}
 	}
 	else {
 		//最大堆，上大下小 => h->heap_array[i/2] < val; 
-		for (i = (++heap->size); heap->heapArray[i / 2] < val; i /= 2)	// ++size;
+		for (; heap->heapArray[i / 2] < val; i /= 2)	// ++size;
 		{
 			heap->heapArray[i] = heap->heapArray[i / 2];
 		}
@@ -63,7 +63,7 @@ void Heap::enqueue(int val)
 int Heap::dequeue()
 {
 	if (heap->size == 0) {
-		return;
+		return INT_MIN;
 	}
 
 	int i, child;

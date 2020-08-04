@@ -18,20 +18,20 @@ HashMap1::HashMap1()
 	hashMap1 = {};
 }
 
-HashMap1::HashMap1(int size)
+HashMap1::HashMap1(int _size)
 {
 	hashMap1 = {};
-	int mapSize = nextPrime(size);
+	int mapSize = nextPrime(_size);
 	for (int i = 1; i <= mapSize; i++) {
 		vector<HashNode1> temp;
 		hashMap1.push_back(temp);
 	}
 }
 
-HashMap1::HashMap1(int size, const int keys[], int N)
+HashMap1::HashMap1(int _size, const int keys[], int N)
 {
 	//1
-	HashMap1(size);
+	HashMap2::HashMap2(_size);
 
 	//2
 	for (int i = 0; i<N; i++) {
@@ -138,10 +138,10 @@ HashMap2::HashMap2(int mapSize)
 	hashMap2 = vector<HashNode2>(size, HashNode2(0));
 }
 
-HashMap2::HashMap2(int mapSize, const int keys[], int N, enum detectFlag flag)
+HashMap2::HashMap2(int _mapSize, const int keys[], int N, enum detectFlag flag)
 {
 	//1
-	HashMap2(mapSize);
+	HashMap2::HashMap2(_mapSize);
 
 	//2
 	for (int i = 0; i<N; i++) {

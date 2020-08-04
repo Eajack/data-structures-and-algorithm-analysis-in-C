@@ -37,12 +37,12 @@ void shellSort(std::vector<int>& nums);
 // 堆排序，平均O(NlogN)，最好O(NlogN), 最差O(NlogN)
 void heapSort(std::vector<int>& nums);
 // 归并排序，平均O(NlogN)，最好O(NlogN), 最差O(NlogN)
-void mergeSortHelper(vector<int> &nums, int low, int high);
-void merge(vector<int> &nums, int low, int mid, int high);
-void mergeSort(std::vector<int>& nums);
+void mergeSort(std::vector<int> &nums);
+std::vector<int> mergeSortHelper(std::vector<int> &nums);
+std::vector<int> merge(std::vector<int> &nums1, std::vector<int> &nums2);
 // 快速排序，平均O(NlogN)，最好O(NlogN), 最差O(N^2)
-int paritition(vector<int>& nums, int low, int high);
-void quickSortHelper(vector<int>& nums, int low, int high);
+int paritition(std::vector<int>& nums, int low, int high);
+void quickSortHelper(std::vector<int>& nums, int low, int high);
 void quickSort(std::vector<int>& nums);
 // 桶排序，平均O(N+K)，最好O(N+K), 最差O(N^2)
 void bucketSort(std::vector<int>& nums, int MAX);

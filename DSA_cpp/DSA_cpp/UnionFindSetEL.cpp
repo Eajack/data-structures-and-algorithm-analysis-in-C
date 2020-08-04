@@ -69,6 +69,6 @@ int UnionFindSet::find(int val)
 		return val;
 	}
 	else {
-		return find(s[val]);
+		return find(unionFindSet[val]);
 	}
 }

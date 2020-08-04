@@ -1,11 +1,11 @@
 /*
-	Author: Eajack Lau
-	Date: 2020/6/24
-	Function:
-		8大排序算法
+Author: Eajack Lau
+Date: 2020/6/24
+Function:
+8大排序算法
 */
 
-#include "SortFunctions.h"
+#include "SortFunctionsEL.h"
 using namespace std;
 
 void bubbleSort(vector<int>& nums)
@@ -39,11 +39,12 @@ void insertSort(vector<int>& nums)
 	int n = nums.size();
 	for (int i = 1; i < n; i++) {
 		int temp = nums[i];
-		int j = i;
-		for (; j > 0 && nums[j - 1] > temp; j++) {
-			nums[j] = nums[j - 1];
+		int j = i - 1;
+		while ((j >= 0) && (temp < nums[j])) {
+			nums[j + 1] = nums[j];
+			j--;
 		}
-		nums[j] = temp;
+		nums[j + 1] = temp;
 	}
 }
 
@@ -74,45 +75,56 @@ void heapSort(vector<int>& nums)
 	nums = ans;
 }
 
-void merge(vector<int> &nums, int low, int mid, int high) {
-	// preconditions:
-	// nums[low...mid] is sorted
-	// nums[mid+1 ... high] is sorted
-	// Copy nums[low ... mid] to leftSubNums
-	// Copy nums[mid+1 ... high] to rightSubNums
-	vector<int> leftSubNums(nums.begin() + low, nums.begin() + mid + 1);
-	vector<int> rightSubNums(nums.begin() + mid + 1, nums.begin() + high + 1);
-	int idxLeft = 0, idxRight = 0;
-	leftSubNums.insert(leftSubNums.end(), numeric_limits<int>::max());
-	rightSubNums.insert(rightSubNums.end(), numeric_limits<int>::max());
-	// Pick min of leftSubNums[idxLeft] and rightSubNums[idxRight], and put into nums[i]
-	for (int i = low; i <= high; i++) {
-		if (leftSubNums[idxLeft] < rightSubNums[idxRight]) {
-			nums[i] = leftSubNums[idxLeft];
-			idxLeft++;
+
+void mergeSort(vector<int>& nums) {
+	vector<int> ans = mergeSortHelper(nums);
+	nums = ans;
+}
+
+vector<int> mergeSortHelper(vector<int>& nums) {
+	//1
+	int n = nums.size();
+	if (n < 2) {
+		return nums;
+	}
+
+	vector<int> nums1, nums2;
+	int i = 0;
+	for (; i<n / 2; i++) {
+		nums1.push_back(nums[i]);
+	}
+	for (; i<n; i++) {
+		nums2.push_back(nums[i]);
+	}
+
+	//2
+	vector<int> t1 = mergeSortHelper(nums1), t2 = mergeSortHelper(nums2);
+	return merge(t1, t2);
+}
+
+vector<int> merge(vector<int>& nums1, vector<int>& nums2) {
+	vector<int> ans;
+	while (!nums1.empty() && !nums2.empty()) {
+		if (nums1[0] <= nums2[0]) {
+			ans.push_back(nums1[0]);
+			nums1.erase(nums1.begin());
 		}
 		else {
-			nums[i] = rightSubNums[idxRight];
-			idxRight++;
+			ans.push_back(nums2[0]);
+			nums2.erase(nums2.begin());
 		}
 	}
-}
-
-void mergeSortHelper(vector<int> &nums, int low, int high) {
-	if (low >= high) {
-		return;
+	while (!nums1.empty()) {
+		ans.push_back(nums1[0]);
+		nums1.erase(nums1.begin());
+	}
+	while (!nums2.empty()) {
+		ans.push_back(nums2[0]);
+		nums2.erase(nums2.begin());
 	}
 
-	int mid = (low + high) / 2;
-	mergeSortHelper(nums, low, mid);
-	mergeSortHelper(nums, mid + 1, high);
-	merge(nums, low, mid, high);
+	return ans;
 }
-
-void mergeSort(vector<int> &nums) {
-	mergeSortHelper(nums, 0, nums.size() - 1);
-}
-
 
 
 int paritition(vector<int>& nums, int low, int high) {
@@ -147,16 +159,16 @@ void quickSort(vector<int>& nums) {
 
 void bucketSort(vector<int>& nums, int MAX)
 {
-	vector<vector<int>> bucket(MAX, vector<int>());
-	int n = nums.size();
-	for (int i = 0; i < n; i++) {
-		bucket[nums[i]].push_back(i);
+	vector<int> bucket(MAX, 0);
+	for (int n : nums) {
+		bucket[n]++;
 	}
 
 	int index = 0;
-	for (vector<int> b : bucket) {
-		for (int i : b) {
-			nums[index++] = nums[i];
+	for (int i = 0; i<bucket.size(); i++) {
+		while (bucket[i] > 0) {
+			nums[index++] = i;
+			bucket[i]--;
 		}
 	}
 }

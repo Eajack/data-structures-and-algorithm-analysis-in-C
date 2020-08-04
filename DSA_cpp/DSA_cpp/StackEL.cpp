@@ -66,7 +66,7 @@ void Stack::pop()
 int Stack::top()
 {
 	if (empty()) {
-		return;
+		return INT_MAX;
 	}
 	return stackTop->val;
 }

@@ -26,6 +26,7 @@
     <ClCompile Include="QueueEL.cpp" />
     <ClCompile Include="SortFunctionsEL.cpp" />
     <ClCompile Include="StackEL.cpp" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="TreeEL.cpp" />
     <ClCompile Include="UnionFindSetEL.cpp" />
   </ItemGroup>

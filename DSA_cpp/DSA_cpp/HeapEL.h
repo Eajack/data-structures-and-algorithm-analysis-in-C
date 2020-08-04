@@ -35,11 +35,11 @@ struct HeapBinary
 		heapArray[0] = flag;
 	}
 	HeapBinary(int capacity, enum HEAP_TYPE flag = MIN) :capacity(capacity), size(0) {
-		heapArray = new int[1];
+		heapArray = new int[capacity];
 		heapArray[0] = flag;
 	}
 	HeapBinary(int capacity, int size, enum HEAP_TYPE flag = MIN) :capacity(capacity), size(size) {
-		heapArray = new int[1];
+		heapArray = new int[capacity];
 		heapArray[0] = flag;
 	}
 };

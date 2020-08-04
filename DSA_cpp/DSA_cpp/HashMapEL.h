@@ -16,9 +16,9 @@ class HashMap1
 {
 public:
 	HashMap1();
-	HashMap1(int size);
+	HashMap1(int _size);
 	// 建表，O(N*M)
-	HashMap1(int size, const int keys[], int N);
+	HashMap1(int _size, const int keys[], int N);
 	~HashMap1();
 
 	// N为链表个数，M为哈希表大小size
